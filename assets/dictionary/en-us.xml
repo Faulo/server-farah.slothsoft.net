@@ -156,12 +156,13 @@ type = \w+</pre>
 			<dd>
 				<p>Assets may define multiple representations of themselves, 
 				so that they can be used transparently in contexts where a specific type of data is expected.</p>
-				<p>For example, all native <i>Farah</i> asset types have an "xml" representation, so that
-				they can be used as-is in XSL transformations.</p>
 				<p>
-					If the Farah URL <code class="url">farah://foo@bar/my-csv-file</code> 
-					points to a <code class="element">sfm:resource</code> of type text/csv, 
-					you can get its contents xmlified by calling <code class="url">farah://foo@bar/my-csv-file#xml</code>.
+					For example, all native <i>Farah</i> asset types have an "xml" representation, so that
+					they can be used as-is in XSL transformations.
+					<br/>
+					That means if the Farah URL <code class="url">farah://foo@bar/my-csv-file</code> 
+					points to a <code class="element">sfm:resource</code> of type <code>text/csv</code>, 
+					you can get an XML document of those comma-separated values by accessing <code class="url">farah://foo@bar/my-csv-file#xml</code>.
 				</p>
 			</dd>
 			<dt>Wait, is that it? I was promised an API documentation!</dt>
