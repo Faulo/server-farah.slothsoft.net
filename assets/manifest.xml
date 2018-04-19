@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 <assets xmlns="http://schema.slothsoft.net/farah/module">
+   <resource-directory name="css" type="text/css"/>
    <resource-directory name="xsl" type="application/xslt+xml"/>
    <resource-directory name="dictionary" type="application/xml"/>
    <resource name="sitemap" type="application/xml"/>
    
    <fragment name="pages">
    	<fragment name="home">
+   		<link-stylesheet ref="css/default"/>
    		<use-template ref="xsl/_home"/>
    	</fragment>
    </fragment>
