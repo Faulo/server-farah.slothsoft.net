@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us">
+	<p key="home/title">Fragments and Resources and Hypertext: A Content Management System</p>
+	
+	<p key="home/header">
+		<h1>Fragments and Resources and Hypertext</h1>
+		<h2>A Content Management System</h2>
+	</p>
+	
+	<p key="home/main">
+		<p>
+			
+		</p>
+	</p>
+	
+	<p key="home/footer">
+		© 2017, 2018 
+		<a href="mailto:info.slothsoft@gmail.com">Slothsoft</a>
+	</p>
+</html>
