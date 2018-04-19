@@ -4,6 +4,7 @@
    <resource-directory name="xsl" type="application/xslt+xml"/>
    <resource-directory name="dictionary" type="application/xml"/>
    <resource name="sitemap" type="application/xml"/>
+   <resource name="favicon" type="image/png"/>
    
    <fragment name="pages">
    	<fragment name="home">
