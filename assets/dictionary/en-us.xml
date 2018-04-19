@@ -51,7 +51,7 @@
 			<dt>Okay, I've defined some assets. How do I reference them?</dt>
 			<dd>
 				<p>Every asset gets assigned a Farah URL based on the module it's defined in, and its position in the manifest file.</p>
-				<p>Farah URLs can be used just like file paths (e.g., <code>fopen</code>, <code>DOMDocument::load</code>, <code>xsl:import</code>, ...).</p>
+				<p>Farah URLs can be used just like file paths (e.g., <code>fopen</code>, <code>DOMDocument::load</code>, <code class="element">xsl:import</code>, ...).</p>
 			</dd>
 			<dt>What's the syntax of a Farah URL?</dt>
 			<dd>
