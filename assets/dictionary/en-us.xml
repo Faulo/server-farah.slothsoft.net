@@ -103,21 +103,20 @@
 				<p>Every asset gets assigned a Farah URL based on the module it's
 					defined in, and its position in the manifest file.</p>
 				<p>
-					Farah URLs can be used just like file paths (e.g.,
+					Farah URLs can be used just like file paths, e.g.,
 					<code>fopen</code>
 					,
 					<code>DOMDocument::load</code>
 					,
 					<code class="element">xsl:import</code>
-					, ...).
+					, etc. all work.
 				</p>
 			</dd>
 			<dt>What's the syntax of a Farah URL?</dt>
 			<dd>
 				<p>
 					A basic
-					<a href="https://tools.ietf.org/html/rfc3986" rel="external">URI</a>
-					, with some additional rules:
+					<a href="https://tools.ietf.org/html/rfc3986" rel="external">URI</a>, with some additional rules:
 				</p>
 				<ul>
 					<li>The scheme must be "farah".</li>
@@ -130,7 +129,7 @@
 					<li>Arguments are optional, and identify input parameters for the
 						asset.</li>
 					<li>The fragment is optional, and identifies a specific
-						representation of the asset.</li>
+						type representation of the asset.</li>
 				</ul>
 				<p>
 					<pre class="bnf">farah-url = "farah://" vendor "@" module path? ("?" arguments)? ("#" type)?
@@ -160,7 +159,7 @@ type = \w+</pre>
 					For example, all native <i>Farah</i> asset types have an "xml" representation, so that
 					they can be used as-is in XSL transformations.
 					<br/>
-					That means if the Farah URL <code class="url">farah://foo@bar/my-csv-file</code> 
+					That means if <code class="url">farah://foo@bar/my-csv-file</code> 
 					points to an <code class="element">sfm:resource</code> asset of type <code>text/csv</code>, 
 					you can get an XML document of those comma-separated values by accessing <code class="url">farah://foo@bar/my-csv-file#xml</code>.
 				</p>
@@ -173,7 +172,7 @@ type = \w+</pre>
 					<em>this</em>
 					website, as it's a nigh-barebone
 					<i>Farah</i>
-					installation, and thus could serve as starting point for a new one.
+					installation, and thus could serve as starting point for a new one:
 					<a href="https://github.com/Faulo/server-farah.slothsoft.net"
 						rel="external">https://github.com/Faulo/server-farah.slothsoft.net</a>
 				</p>
