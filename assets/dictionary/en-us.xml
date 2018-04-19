@@ -161,7 +161,7 @@ type = \w+</pre>
 					they can be used as-is in XSL transformations.
 					<br/>
 					That means if the Farah URL <code class="url">farah://foo@bar/my-csv-file</code> 
-					points to a <code class="element">sfm:resource</code> of type <code>text/csv</code>, 
+					points to an <code class="element">sfm:resource</code> asset of type <code>text/csv</code>, 
 					you can get an XML document of those comma-separated values by accessing <code class="url">farah://foo@bar/my-csv-file#xml</code>.
 				</p>
 			</dd>
