@@ -131,8 +131,7 @@
 					<li>The fragment is optional, and identifies a specific
 						type representation of the asset.</li>
 				</ul>
-				<p>
-					<pre class="bnf">farah-url = "farah://" vendor "@" module path? ("?" arguments)? ("#" type)?
+				<pre class="bnf">farah-url = "farah://" vendor "@" module path? ("?" arguments)? ("#" type)?
 
 vendor = \w+
 
@@ -143,7 +142,6 @@ path = (/\w)+
 arguments = .+
 
 type = \w+</pre>
-				</p>
 				<p>
 					For example,
 					<code class="url">farah://slothsoft@farah/request#xml</code>
