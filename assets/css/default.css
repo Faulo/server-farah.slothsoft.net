@@ -1,0 +1,40 @@
+dt {
+	font-weight: bold;
+}
+
+p {
+	margin: 0.5em 0em;
+}
+
+/* http://colorschemedesigner.com/csd-3.5/#3c61Te5vdw0w0 */
+html {
+	font-family: sans-serif;
+	color: #333;
+	background: #e0e0e0;
+}
+
+header {
+	background: rgb(139, 207, 194) none repeat scroll 0% 0%;
+	opacity: 0.5;
+}
+
+main {
+	background: white;
+}
+
+footer {
+	background: rgb(190, 233, 177) none repeat scroll 0% 0%;
+	color: rgb(62, 137, 38);
+	border-color: rgb(140, 211, 118);
+}
+
+h3 {
+	color: rgb(140, 211, 118);
+}
+code {
+	background: rgb(62, 137, 38) none repeat scroll 0% 0%;
+	color: rgb(190, 233, 177);
+	padding: 0.25em;
+	border-radius: 0.25em;
+	display: inline-block;
+}

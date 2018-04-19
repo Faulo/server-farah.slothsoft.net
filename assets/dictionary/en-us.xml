@@ -3,8 +3,11 @@
 	<p key="home/title">Fragments and Resources and Hypertext: A Content Management System</p>
 	
 	<p key="home/header">
-		<h1>Fragments and Resources and Hypertext</h1>
-		<h2>A Content Management System</h2>
+		<h1>
+			Fragments and Resources and Hypertext
+			<br/>
+			<small>A Content Management System</small>
+		</h1>
 	</p>
 	
 	<p key="home/main">
@@ -20,13 +23,15 @@
 			<dd>
 				<p>
 					Farah stands for "Fragments and Resources and Hypertext".
+				</p>
+				<p>
 					It's used invariably to mean one of the following:
 				</p>
 				<ul>
 					<li>"This CMS", duh.</li>
 					<li>Its composer package, <a href="https://packagist.org/packages/slothsoft/farah" rel="external">slothsoft/farah</a>.</li>
-					<li>Its PHP streaming protocol, <samp>farah://</samp></li>
-					<li>Its root module, <samp>farah://slothsoft@farah</samp></li>
+					<li>Its PHP streaming protocol, <code>farah://</code>.</li>
+					<li>Its root module, <code>farah://slothsoft@farah</code>.</li>
 				</ul>
 			</dd>
 			<dt>Okay, but what does it do?</dt>
