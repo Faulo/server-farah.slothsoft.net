@@ -129,8 +129,8 @@
 						module manifest.</li>
 					<li>Arguments are optional, and identify input parameters for the
 						asset.</li>
-					<li>The fragment is optional, and identifies specific
-						representations of the asset.</li>
+					<li>The fragment is optional, and identifies a specific
+						representation of the asset.</li>
 				</ul>
 				<p>
 					<pre class="bnf">farah-url = "farah://" vendor "@" module path? ("?" arguments)? ("#" type)?
@@ -150,6 +150,18 @@ type = \w+</pre>
 					<code class="url">farah://slothsoft@farah/request#xml</code>
 					identifies the "xml" representation of the asset with the name
 					"request" in the module "farah" by vendor "slothsoft".
+				</p>
+			</dd>
+			<dt>What's this about representations?</dt>
+			<dd>
+				<p>Assets may define multiple representations of themselves, 
+				so that they can be used transparently in contexts where a specific type of data is expected.</p>
+				<p>For example, all native <i>Farah</i> asset types have an "xml" representation, so that
+				they can be used as-is in XSL transformations.</p>
+				<p>
+					If the Farah URL <code class="url">farah://foo@bar/my-csv-file</code> 
+					points to a <code class="element">sfm:resource</code> of type text/csv, 
+					you can get its contents xmlified by calling <code class="url">farah://foo@bar/my-csv-file#xml</code>.
 				</p>
 			</dd>
 			<dt>Wait, is that it? I was promised an API documentation!</dt>
