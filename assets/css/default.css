@@ -12,22 +12,31 @@ html {
 	color: #333;
 	background: #e0e0e0;
 }
+body {
+	margin: 1em;
+}
 
 header {
 	background: rgb(139, 207, 194) none repeat scroll 0% 0%;
-	opacity: 0.5;
+	color: #1D6759;
+	padding: 1em;
 }
 
 main {
 	background: white;
+	padding: 1em;
 }
 
 footer {
 	background: rgb(190, 233, 177) none repeat scroll 0% 0%;
 	color: rgb(62, 137, 38);
 	border-color: rgb(140, 211, 118);
+	padding: 1em;
 }
 
+h1 {
+	margin: 0;
+}
 h3 {
 	color: rgb(140, 211, 118);
 }
