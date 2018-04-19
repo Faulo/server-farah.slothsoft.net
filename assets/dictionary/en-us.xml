@@ -133,13 +133,16 @@
 						representations of the asset.</li>
 				</ul>
 				<p>
-					<pre class="bnf">farah-url = "farah://" vendor "@" module path? ("?"
-arguments)? ("#" type)?
+					<pre class="bnf">farah-url = "farah://" vendor "@" module path? ("?" arguments)? ("#" type)?
 
 vendor = \w+
+
 module = \w+
+
 path = (/\w)+
+
 arguments = .+
+
 type = \w+</pre>
 				</p>
 				<p>
