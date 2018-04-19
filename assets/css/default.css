@@ -40,14 +40,16 @@ h1 {
 h3 {
 	color: rgb(140, 211, 118);
 }
-code {
+code, pre {
 	background: rgb(190, 233, 177) none repeat scroll 0% 0%;
 	color: rgb(62, 137, 38);
 	padding: 0.25em;
 	border-radius: 0.25em;
+}
+code {
 	display: inline-block;
 }
-code.element {
+code.url {
 	background: rgb(62, 137, 38) none repeat scroll 0% 0%;
 	color: rgb(190, 233, 177);
 }

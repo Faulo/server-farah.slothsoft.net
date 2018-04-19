@@ -28,8 +28,9 @@
 					It's used invariably to mean one of the following:
 				</p>
 				<ul>
-					<li>"This CMS", duh.</li>
+					<li>This CMS, duh.</li>
 					<li>Its composer package, <a href="https://packagist.org/packages/slothsoft/farah" rel="external">slothsoft/farah</a>.</li>
+					<li>Its github repository, <a href="https://github.com/Faulo/slothsoft-farah" rel="external">https://github.com/Faulo/slothsoft-farah</a>.</li>
 					<li>Its PHP streaming protocol, <code>farah://</code>.</li>
 					<li>Its root module, <code>farah://slothsoft@farah</code>.</li>
 				</ul>
@@ -55,23 +56,29 @@
 			</dd>
 			<dt>What's the syntax of a Farah URL?</dt>
 			<dd>
-				<p>This is what they look like:</p>
+				<p>A basic <a href="https://tools.ietf.org/html/rfc3986" rel="external">URI</a>, with some additional rules:</p>
+				<ul>
+					<li>The scheme must be "farah".</li>
+					<li>The user is required, and identifies the vendor.</li>
+					<li>The password is forbidden.</li>
+					<li>The host is required, and identifies the module.</li>
+					<li>The port is forbidden.</li>
+					<li>The path is optional, and identifies the asset inside the module manifest.</li>
+					<li>Arguments are optional, and identify input parameters for the asset.</li>
+					<li>The fragment is optional, and identifies specific representations of the asset.</li>
+				</ul>
 				<p>
-					<code>
-						<abbr title="The scheme is constant.">farah</abbr>
-						<span>://</span>
-						<abbr title="The name of your company, probably">vendor</abbr>
-						<span>@</span>
-						<abbr title="The name of your module.">module</abbr>
-						<abbr title="An hierarchical path, built from the 'name' attributes of your module manifest elements.">/asset/path</abbr>
-						<span>?</span>
-						<abbr title="If your asset takes arguments, you can specify what they are, as a good old query string.">arguments</abbr>
-						<span>#</span>
-						<abbr title="If your asset supports multiple ways of representing itself, you can specify which of those you want here.">type</abbr>
-					</code>
+					<pre class="bnf">
+FarahUrl = "farah://" vendor "@" module path? ("?" arguments)? ("#" type)?
+
+vendor = \w+
+module = \w+
+path = (/\w)+
+arguments = .+
+type = \w+</pre>
 				</p>
 				<p>
-					For example, <code>farah://slothsoft@farah/request#xml</code>
+					For example, <code class="url">farah://slothsoft@farah/request#xml</code>
 					identifies the "xml" representation of the asset with the name
 					"request" in the module "farah" by vendor "slothsoft".
 				</p>				
