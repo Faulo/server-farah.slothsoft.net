@@ -1,32 +1,33 @@
 {
-	"name" : "slothsoft/farah.slothsoft.net",
-	"type" : "project",
-	"description" : "farah.slothsoft.net",
-	"license" : "GPL",
-	"keywords" : [
-		"farah-server",
-		"slothsoft"
-	],
-	"autoload" : {
-		"files" : [
-			"src/registerModule.php",
-			"config.php"
-		]
-	},
-	"require" : {
-		"php" : ">=7.0",
-		"slothsoft/core" : "dev-master",
-		"slothsoft/farah" : "dev-master"
-	},
-	"require-dev" : {
-		"phpunit/phpunit" : ">=6.5"
-	},
-	"autoload-dev" : {
-		"classmap" : [
-			"tests/"
-		]
-	},
-	"classmap-authoritative" : true,
-	"minimum-stability" : "dev",
-	"prefer-stable" : true
+    "name": "slothsoft/farah.slothsoft.net",
+    "type": "project",
+    "description": "farah.slothsoft.net",
+    "license": "GPL",
+    "keywords": [
+        "farah-module",
+        "farah-server",
+        "slothsoft"
+    ],
+    "autoload": {
+        "files": [
+            "config.php",
+            "src/registerModule.php"
+        ]
+    },
+    "require": {
+        "php": ">=7.0",
+        "slothsoft/core": "dev-master",
+        "slothsoft/farah": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=6.5"
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "classmap-authoritative": true,
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
