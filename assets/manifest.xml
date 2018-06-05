@@ -8,8 +8,8 @@
    
    <fragment name="pages">
    	<fragment name="home">
-   		<link-stylesheet ref="css/default"/>
-   		<use-template ref="xsl/_home"/>
+   		<link-stylesheet ref="/css/default"/>
+   		<use-template ref="/xsl/_home"/>
    	</fragment>
    </fragment>
  </assets>
