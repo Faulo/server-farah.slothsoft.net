@@ -31,8 +31,5 @@
     "scripts": {
         "post-autoload-dump": "Slothsoft\\Core\\ServerEnvironment::cleanCacheDirectory"
     },
-    "homepage": "http://farah.slothsoft.net/",
-    "version": "1.0.0",
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "homepage": "http://farah.slothsoft.net/"
 }
