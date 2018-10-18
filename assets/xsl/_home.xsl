@@ -13,7 +13,7 @@
 				<title data-dict="">home/title</title>
 				<meta name="viewport" content="width=device-width, initial-scale=1"/>
 				<meta name="author" content="Daniel Schulz"/>
-				<link rel="icon" type="image/png" href="/getAsset.php/farah.slothsoft.net/favicon"/>
+				<link rel="icon" type="image/png" href="/slothsoft@farah.slothsoft.net/favicon"/>
 			</head>
 			<body>
 				<div class="page">
