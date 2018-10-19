@@ -31,5 +31,11 @@
     "scripts": {
         "post-autoload-dump": "Slothsoft\\Core\\ServerEnvironment::cleanCacheDirectory"
     },
-    "homepage": "http://farah.slothsoft.net/"
+    "homepage": "http://farah.slothsoft.net",
+    "authors": [
+        {
+            "name": "Daniel Schulz",
+            "email": "info.slothsoft@gmai.com"
+        }
+    ]
 }
