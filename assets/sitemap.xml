@@ -8,5 +8,6 @@
 	module="farah.slothsoft.net"
 	ref="pages/home" status-active="" status-public=""
 	sfd:languages="en-us">
+	<page name="favicon.ico" ext="/favicon.ico" ref="static/favicon" status-active=""/>
 	<page name="sitemap" ref="//slothsoft@farah/sitemap-generator" status-active=""/>
 </domain>
