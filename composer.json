@@ -2,7 +2,7 @@
     "name": "slothsoft/farah.slothsoft.net",
     "type": "project",
     "description": "farah.slothsoft.net",
-    "license": "WTFPL",
+    "license": "MIT",
     "keywords": [
         "slothsoft",
         "farah-module",
@@ -11,26 +11,28 @@
     "autoload": {
         "files": [
             "config.php",
-            "src/registerModule.php"
+			"scripts/bootstrap.php"
         ]
     },
     "require": {
-        "php": "^7.2",
-        "slothsoft/core": "*",
-        "slothsoft/farah": "*"
+        "php": "^7.4",
+        "slothsoft/core": "^1.10",
+        "slothsoft/farah": "^1.10"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.5"
+        "phpunit/phpunit": "8.5.*"
     },
-    "autoload-dev": {
-        "classmap": [
-            "tests/"
-        ]
-    },
+	"autoload-dev" : {
+		"psr-4" : {
+			"Slothsoft\\Server\\Farah\\Tests\\" : "tests"
+		}
+	},
     "classmap-authoritative": true,
-    "scripts": {
-        "post-autoload-dump": "Slothsoft\\Core\\ServerEnvironment::cleanCacheDirectory"
-    },
+	"scripts" : {
+		"post-update-cmd" : "composer exec server-clean cache",
+		"farah-asset" : "@php vendor/slothsoft/farah/scripts/farah-asset.php",
+		"farah-page" : "@php vendor/slothsoft/farah/scripts/farah-page.php"
+	},
     "homepage": "http://farah.slothsoft.net",
     "authors": [
         {

@@ -1,4 +1,4 @@
-farah.slothsoft.net
-===================
+# Farah Homepage
 
-The homepage of Farah.
+[![Test Status](../../actions/workflows/ci-tests.yml/badge.svg)](../../actions/workflows/ci-tests.yml)
+[![license badge](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
