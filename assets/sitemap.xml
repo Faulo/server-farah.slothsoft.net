@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<domain 
-	xmlns="http://schema.slothsoft.net/farah/sitemap"
-	xmlns:sfd="http://schema.slothsoft.net/farah/dictionary"
-	xmlns:sfm="http://schema.slothsoft.net/farah/module"
-	name="farah.slothsoft.net"
-	vendor="slothsoft"
-	module="farah.slothsoft.net"
-	ref="pages/home" status-active="" status-public=""
-	sfd:languages="en-us">
-	<page name="favicon.ico" ext="/favicon.ico" ref="static/favicon" status-active=""/>
-	<page name="sitemap" ref="//slothsoft@farah/sitemap-generator" status-active=""/>
+<domain xmlns="http://schema.slothsoft.net/farah/sitemap" xmlns:sfd="http://schema.slothsoft.net/farah/dictionary"
+	xmlns:sfm="http://schema.slothsoft.net/farah/module" name="farah.slothsoft.net" vendor="slothsoft" module="farah.slothsoft.net" ref="pages/home"
+	status-active="" status-public="" sfd:languages="en-us" version="1.1">
+
+	<file name="favicon.ico" ref="/favicon" status-active="" />
+	<page name="sitemap" ref="//slothsoft@farah/sitemap-generator" status-active="" />
 </domain>
