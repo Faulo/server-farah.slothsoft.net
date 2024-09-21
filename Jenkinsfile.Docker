@@ -1,0 +1,23 @@
+pipeline {
+	agent {
+	    label 'jenkins && docker'
+	}
+	environment {
+	    PHP_VERSION = '8.3'
+		VHOST_ROOT = '/var/vhosts'
+	}
+    stages {
+        stage('Build image and run tests') {
+            steps {
+                script {
+                    withEnv(readFile('.env').split('\n') as List) {
+                        docker.image("faulo/farah:$PHP_VERSION").inside {
+                            sh 'composer install'
+                            sh 'composer exec phpunit -- --log-junit report.xml'
+                            junit 'report.xml'
+                        }
+                    }
+                }
+            }
+        }
+}
