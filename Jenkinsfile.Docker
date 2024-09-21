@@ -18,5 +18,15 @@ pipeline {
                 }
             }
         }
+        stage('Deploy') {
+            steps {
+                script {
+                    dir('/var/vhosts/farah') {
+                        checkout scm
+                        sh "docker-compose up -d"
+                    }
+                }
+            }
+        }
 	}
 }
