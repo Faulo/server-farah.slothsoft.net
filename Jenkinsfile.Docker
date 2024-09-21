@@ -20,9 +20,9 @@ pipeline {
             steps {
                 script {
 					withEnv(readFile('.env').split('\n') as List) {
-						dir("/var/vhosts/$STACK") {
+						dir("/var/vhosts/$STACK_NAME") {
 							checkout scm
-							sh "docker stack deploy $STACK --detach=true --prune --resolve-image=changed -c=docker-compose.yml"
+							sh "docker stack deploy $STACK_NAME --detach=true --prune --resolve-image=changed -c=docker-compose.yml"
 						}
 					}
                 }
