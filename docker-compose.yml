@@ -16,8 +16,7 @@ services:
                 max_attempts: 3
                 window: 120s
         networks:
-            - vhosts
+            - vhosts_default
 networks:
-    vhosts:
-        driver: overlay
-        attachable: true
+    vhosts_default:
+        external: true
