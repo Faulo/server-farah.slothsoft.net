@@ -1,7 +1,30 @@
 <?php
 declare(strict_types = 1);
 
+namespace Slothsoft;
+
+use Slothsoft\Core\ServerEnvironment;
+use Slothsoft\Farah\Dictionary;
+use Slothsoft\Farah\Kernel;
 use Slothsoft\Farah\Module\Module;
 
-Module::registerWithXmlManifestAndDefaultAssets('slothsoft@farah.slothsoft.net', dirname(__DIR__) . DIRECTORY_SEPARATOR . 'assets');
+@include __DIR__ . '/../../../global/slothsoft.core.php';
+@include __DIR__ . '/../../../global/slothsoft.core.xslt.php';
+@include __DIR__ . '/../../../global/slothsoft.core.dbms.php';
+@include __DIR__ . '/../../../global/slothsoft.farah.php';
+// @include __DIR__ . '/../../../global/slothsoft.minecraft.php';
+// @include __DIR__ . '/../../../global/slothsoft.mtg.php';
+
+$root = dirname(__DIR__);
+
+ServerEnvironment::setRootDirectory($root);
+ServerEnvironment::setCacheDirectory($root . DIRECTORY_SEPARATOR . 'cache');
+ServerEnvironment::setLogDirectory($root . DIRECTORY_SEPARATOR . 'log');
+ServerEnvironment::setDataDirectory($root . DIRECTORY_SEPARATOR . 'data');
+
+Module::registerWithXmlManifestAndDefaultAssets('slothsoft@farah.slothsoft.net', $root . DIRECTORY_SEPARATOR . 'assets');
+
+Kernel::setCurrentSitemap('farah://slothsoft@farah.slothsoft.net/sitemap');
+Kernel::setTrackingEnabled(false);
+Dictionary::setSupportedLanguages('en-us');
 
