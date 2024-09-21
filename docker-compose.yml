@@ -1,5 +1,5 @@
 services:
-    localhost:
+    farah:
         image: faulo/farah:8.3
         volumes:
             - ./assets:/var/www/assets
@@ -8,9 +8,6 @@ services:
             - ./composer.lock:/var/www/composer.lock
             - ./html/google0e2ae129a89d6e6f.html:/var/www/html/google0e2ae129a89d6e6f.html
             - ./html/robots.txt:/var/www/html/robots.txt
-        ports:
-            - 80:80
-            - 443:443
         deploy:
             mode: global
             restart_policy:
@@ -18,3 +15,9 @@ services:
                 delay: 5s
                 max_attempts: 3
                 window: 120s
+        networks:
+            - vhosts
+networks:
+    vhosts:
+        driver: overlay
+        attachable: true
