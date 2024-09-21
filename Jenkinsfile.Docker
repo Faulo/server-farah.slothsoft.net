@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script {
 					docker.image("faulo/farah:$PHP_VERSION").inside {
-						sh 'composer install'
+						sh 'composer install --no-interaction'
 						sh 'composer exec phpunit -- --log-junit report.xml'
 						junit 'report.xml'
 					}
