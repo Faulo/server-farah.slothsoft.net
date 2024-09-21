@@ -6,10 +6,12 @@ pipeline {
         stage('Build image and run tests') {
             steps {
                 script {
-					docker.image("faulo/farah:$PHP_VERSION").inside {
-						sh 'composer install --no-interaction'
-						sh 'composer exec phpunit -- --log-junit report.xml'
-						junit 'report.xml'
+					withEnv(readFile('.env').split('\n') as List) {
+						docker.image("faulo/farah:$PHP_VERSION").inside {
+							sh 'composer install --no-interaction'
+							sh 'composer exec phpunit -- --log-junit report.xml'
+							junit 'report.xml'
+						}
 					}
                 }
             }
@@ -17,10 +19,12 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    dir("/var/vhosts/$STACK") {
-                        checkout scm
-                        sh "docker stack deploy $STACK --detach=true --prune --resolve-image=changed -c=docker-compose.yml"
-                    }
+					withEnv(readFile('.env').split('\n') as List) {
+						dir("/var/vhosts/$STACK") {
+							checkout scm
+							sh "docker stack deploy $STACK --detach=true --prune --resolve-image=changed -c=docker-compose.yml"
+						}
+					}
                 }
             }
         }
