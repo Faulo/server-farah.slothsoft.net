@@ -2,10 +2,6 @@ pipeline {
 	agent {
 	    label 'jenkins && docker'
 	}
-	environment {
-	    PHP_VERSION = '8.3'
-		VHOST_ROOT = '/var/vhosts'
-	}
     stages {
         stage('Build image and run tests') {
             steps {
@@ -21,9 +17,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    dir('/var/vhosts/farah') {
+                    dir("/var/vhosts/$STACK") {
                         checkout scm
-                        sh "docker-compose up -d"
+                        sh "docker stack deploy $STACK --detach=true --prune --resolve-image=changed -c=docker-compose.yml"
                     }
                 }
             }
