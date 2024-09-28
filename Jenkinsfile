@@ -20,8 +20,12 @@ pipeline {
 					stage ('Deploy stack') {
 						dir("/var/vhosts/farah") {
 							checkout scm
-							def service = "farah_farah"
 							unstash 'lock'
+							
+							sh "mkdir -p assets scripts src html data log"
+							sh "chmod 777 . assets scripts src html data log"							
+							
+							def service = "farah_farah"
 							sh "docker stack deploy farah --detach=true --prune --resolve-image=never -c=docker-compose.yml"
 							sh "docker service update --force " + service
 							//sh 'docker exec $(docker ps -q -f name=' + service + ') composer install --no-interaction --no-dev'
