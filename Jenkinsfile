@@ -20,7 +20,7 @@ pipeline {
 					stage ('Deploy stack') {
 						dir("/var/vhosts/farah") {
 							checkout scm
-							def service = env.STACK_NAME + '_' + env.STACK_NAME
+							def service = "farah_farah"
 							unstash 'lock'
 							sh "docker stack deploy farah --detach=true --prune --resolve-image=never -c=docker-compose.yml"
 							sh "docker service update --force " + service
