@@ -1,186 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us">
-	<p key="home/title">Files and Resources and Hypertext: A Content Management
-		System</p>
+<sfd:dictionary xmlns="http://www.w3.org/1999/xhtml" xmlns:sfd="http://schema.slothsoft.net/farah/dictionary" version="1.0">
+    <sfd:text xml:id="home.title">Files and Resources and Hypertext: A Content Management System</sfd:text>
 
-	<p key="home/header">
-		<h1>
-			Files and Resources and Hypertext
-			<br />
-			<small>A Content Management System</small>
-		</h1>
-	</p>
+    <sfd:fragment xml:id="home.header">
+        <h1>
+            Files and Resources and Hypertext
+            <br />
+            <small>A Content Management System</small>
+        </h1>
+    </sfd:fragment>
 
-	<p key="home/main">
-		<p>
-			Welcome! This is the homepage of
-			<i>Farah</i>
-			, a PHP-based CMS.
-		</p>
-		<p>
-			This website is going to have all the info you need to use it, like
-			an API documentation and code examples probably.
-		</p>
-		<h3>
-			<abbr title="a.k.a. Fictitiously Asked Questions">FAQ</abbr>
-		</h3>
-		<dl>
-			<dt>
-				What is
-				<i>Farah</i>
-				?
-			</dt>
-			<dd>
-				<p>
-					<i>Farah</i>
-					stands for "Files and Resources and Hypertext".
-				</p>
-				<p>
-					It's used on here to invariably mean one of the following:
-				</p>
-				<ul>
-					<li>The CMS, duh.</li>
-					<li>
-						Its composer package,
-						<a href="https://packagist.org/packages/slothsoft/farah"
-							rel="external">slothsoft/farah</a>
-						.
-					</li>
-					<li>
-						Its github repository,
-						<a href="https://github.com/Faulo/slothsoft-farah"
-							rel="external">https://github.com/Faulo/slothsoft-farah</a>
-						.
-					</li>
-					<li>
-						Its PHP streaming protocol,
-						<code>farah://</code>
-						.
-					</li>
-					<li>
-						Its root module,
-						<code class="url">farah://slothsoft@farah</code>
-						.
-					</li>
-				</ul>
-			</dd>
-			<dt>Okay, but what does it do?</dt>
-			<dd>
-				<p>It serves content! Like websites.</p>
-				<p>
-					Basically, you define a sitemap and link each page to one of your
-					assets, and with those definitions
-					<i>Farah</i>
-					resolves requests to your server by handing out the assets.
-				</p>
-			</dd>
-			<dt>So... how do I define a sitemap?</dt>
-			<dd>
-				<p>
-					You create an XML according to
-					<a href="http://schema.slothsoft.net/farah/sitemap/">the sitemap spec</a>
-					.
-				</p>
-			</dd>
-			<dt>What about assets?</dt>
-			<dd>
-				<p>
-					An "asset" in the
-					<i>Farah</i>
-					context is an identifiable resource of your domain. It can be a
-					file, the result of an XSL transformation, or something generated
-					by your PHP code.
-				</p>
-				<p>
-					Assets are defined in something called a module manifest, which is
-					an XML file according to
-					<a href="http://schema.slothsoft.net/farah/module/">the module manifest spec</a>
-					.
-				</p>
-			</dd>
-			<dt>Okay, I've defined some assets. How do I reference them?</dt>
-			<dd>
-				<p>Every asset gets assigned a Farah URL based on the module it's
-					defined in, and its position in the manifest file.</p>
-				<p>
-					Farah URLs can be used just like file paths, e.g.,
-					<code>fopen</code>
-					,
-					<code>DOMDocument::load</code>
-					,
-					<code class="element">xsl:import</code>
-					, etc. all work.
-				</p>
-			</dd>
-			<dt>What's the syntax of a Farah URL?</dt>
-			<dd>
-				<p>
-					A basic
-					<a href="https://tools.ietf.org/html/rfc3986" rel="external">URI</a>, with some additional rules:
-				</p>
-				<ul>
-					<li>The scheme must be "farah".</li>
-					<li>The user is required, and identifies the vendor.</li>
-					<li>The password is forbidden.</li>
-					<li>The host is required, and identifies the module.</li>
-					<li>The port is forbidden.</li>
-					<li>The path is optional, and identifies the asset inside the
-						module manifest.</li>
-					<li>Arguments are optional, and identify input parameters for the
-						asset.</li>
-					<li>The fragment is optional, and identifies a specific
-						type representation of the asset.</li>
-				</ul>
-				<pre class="bnf">farah-url = "farah://" vendor "@" module path? ("?" arguments)? ("#" type)?
+    <sfd:fragment xml:id="home.main" xml:space="preserve">
+        <p>
+            Welcome! This is the homepage of <i>Farah</i>, a PHP-based CMS.
+        </p>
+        <p>
+            This website is going to have all the info you need to use it, like
+            an API documentation and code examples probably.
+        </p>
+        <h3>
+            <abbr title="a.k.a. Fictitiously Asked Questions">FAQ</abbr>
+        </h3>
+        <dl>
+            <dt>
+                What is <i>Farah</i>?
+            </dt>
+            <dd>
+                <p>
+                    <i>Farah</i> stands for "Files and Resources and Hypertext".
+                </p>
+                <p>
+                    It's used on here to invariably mean one of the following:
+                </p>
+                <ul>
+                    <li>The CMS, duh.</li>
+                    <li>
+                        Its composer package, <a href="https://packagist.org/packages/slothsoft/farah" rel="external">slothsoft/farah</a>.
+                    </li>
+                    <li>
+                        Its github repository, <a href="https://github.com/Faulo/slothsoft-farah" rel="external">https://github.com/Faulo/slothsoft-farah</a>.
+                    </li>
+                    <li>
+                        Its PHP streaming protocol, <code>farah://</code>.
+                    </li>
+                    <li>
+                        Its root module, <code class="url">farah://slothsoft@farah</code>.
+                    </li>
+                </ul>
+            </dd>
+            <dt>Okay, but what does it do?</dt>
+            <dd>
+                <p>It serves content! Like websites.</p>
+                <p>
+                    Basically, you define a sitemap and link each page to one of your
+                    assets, and with those definitions
+                    <i>Farah</i>
+                    resolves requests to your server by handing out the assets.
+                </p>
+            </dd>
+            <dt>So... how do I define a sitemap?</dt>
+            <dd>
+                <p>
+                    You create an XML according to
+                    <a href="http://schema.slothsoft.net/farah/sitemap/">the sitemap spec</a>
+                    .
+                </p>
+            </dd>
+            <dt>What about assets?</dt>
+            <dd>
+                <p>
+                    An "asset" in the
+                    <i>Farah</i>
+                    context is an identifiable resource of your domain. It can be a
+                    file, the result of an XSL transformation, or something generated
+                    by your PHP code.
+                </p>
+                <p>
+                    Assets are defined in something called a module manifest, which is
+                    an XML file according to <a href="http://schema.slothsoft.net/farah/module/">the module manifest spec</a>.
+                </p>
+            </dd>
+            <dt>Okay, I've defined some assets. How do I reference them?</dt>
+            <dd>
+                <p>Every asset gets assigned a Farah URL based on the module it's
+                    defined in, and its position in the manifest file.
+                </p>
+                <p>
+                    Farah URLs can be used just like file paths, e.g.,
+                    <code>fopen</code>,
+                    <code>DOMDocument::load</code>,
+                    <code class="element">xsl:import</code>, etc. all work.
+                </p>
+            </dd>
+            <dt>What's the syntax of a Farah URL?</dt>
+            <dd>
+                <p>
+                    A basic <a href="https://tools.ietf.org/html/rfc3986" rel="external">URI</a>, with some additional rules:
+                </p>
+                <ul>
+                    <li>The scheme must be "farah".</li>
+                    <li>The user is required, and identifies the vendor.</li>
+                    <li>The password is forbidden.</li>
+                    <li>The host is required, and identifies the module.</li>
+                    <li>The port is forbidden.</li>
+                    <li>The path is optional, and identifies the asset inside the
+                        module manifest.
+                    </li>
+                    <li>Arguments are optional, and identify input parameters for the
+                        asset.
+                    </li>
+                    <li>The fragment is optional, and identifies a specific
+                        type representation of the asset.
+                    </li>
+                </ul>
+                <pre class="bnf"><![CDATA[
+farah-url = "farah://" vendor "@" module path? ("?" arguments)? ("#" type)?
 
-vendor = \w+
+    vendor = \w+
 
-module = \w+
+    module = \w+
 
-path = (/\w)+
+    path = (/\w)+
 
-arguments = .+
+    arguments = .+
 
-type = \w+</pre>
-				<p>
-					For example,
-					<code class="url">farah://slothsoft@farah/request#xml</code>
-					identifies the "xml" representation of the asset with the name
-					"request" in the module "farah" by vendor "slothsoft".
-				</p>
-			</dd>
-			<dt>What's this about representations?</dt>
-			<dd>
-				<p>Assets may define multiple representations of themselves, 
-				so that they can be used transparently in contexts where a specific type of data is expected.</p>
-				<p>
-					For example, all native <i>Farah</i> asset types have an "xml" representation, so that
-					they can be used as-is in XSL transformations.
-					<br/>
-					That means if <code class="url">farah://foo@bar/my-csv-file</code> 
-					points to an <code class="element">sfm:resource</code> asset of type <code>text/csv</code>, 
-					you can get an XML document of those comma-separated values by accessing <code class="url">farah://foo@bar/my-csv-file#xml</code>.
-				</p>
-			</dd>
-			<dt>Wait, is that it? I was promised an API documentation!</dt>
-			<dd>
-				<p>Uhm. Yeah. Sorry! D: I'll get around to that eventually.</p>
-				<p>
-					For now, the best I can offer is the source code to
-					<em>this</em>
-					website, as it's a nigh-barebone
-					<i>Farah</i>
-					installation, and thus could serve as starting point for a new one:
-					<a href="https://github.com/Faulo/server-farah.slothsoft.net"
-						rel="external">https://github.com/Faulo/server-farah.slothsoft.net</a>
-				</p>
-			</dd>
-		</dl>
-	</p>
+    type = \w+
+                ]]></pre>
+                <p>
+                    For example,
+                    <code class="url">farah://slothsoft@farah/request#xml</code>
+                    identifies the "xml" representation of the asset with the name
+                    "request" in the module "farah" by vendor "slothsoft".
+                </p>
+            </dd>
+            <dt>What's this about representations?</dt>
+            <dd>
+                <p>Assets may define multiple representations of themselves,
+                    so that they can be used transparently in contexts where a specific type of data is expected.
+                </p>
+                <p>
+                    For example, all native
+                    <i>Farah</i>
+                    asset types have an "xml" representation, so that
+                    they can be used as-is in XSL transformations.
+                    <br />
+                    That means if
+                    <code class="url">farah://foo@bar/my-csv-file</code>
+                    points to an
+                    <code class="element">sfm:resource</code>
+                    asset of type
+                    <code>text/csv</code>,
+                    you can get an XML document of those comma-separated values by accessing
+                    <code class="url">farah://foo@bar/my-csv-file#xml</code>.
+                </p>
+            </dd>
+            <dt>Wait, is that it? I was promised an API documentation!</dt>
+            <dd>
+                <p>Uhm. Yeah. Sorry! D: I'll get around to that eventually.</p>
+                <p>
+                    For now, the best I can offer is the source code to
+                    <em>this</em>
+                    website, as it's a nigh-barebone
+                    <i>Farah</i>
+                    installation, and thus could serve as starting point for a new one:
+                    <a href="https://github.com/Faulo/server-farah.slothsoft.net" rel="external">https://github.com/Faulo/server-farah.slothsoft.net</a>
+                </p>
+            </dd>
+        </dl>
+    </sfd:fragment>
 
-	<p key="home/footer">
-		© 2017 - 2023
-		<a href="mailto:daniel.lio.schulz@gmail.com">Daniel Schulz</a>,
-		<a href="http://slothsoft.net">Slothsoft</a>
-	</p>
-</html>
+    <sfd:entry xml:id="home.footer" xml:space="preserve">
+        © 2017 - 2026
+        <a href="mailto:daniel.lio.schulz@gmail.com">Daniel Schulz</a>,
+        <a href="http://slothsoft.net">Slothsoft</a>
+    </sfd:entry>
+</sfd:dictionary>

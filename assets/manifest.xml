@@ -1,15 +1,16 @@
 <?xml version="1.0"?>
 <assets xmlns="http://schema.slothsoft.net/farah/module" version="1.1">
-	<resource-directory name="css" type="text/css" />
-	<resource-directory name="xsl" type="application/xslt+xml" />
-	<resource-directory name="dictionary" type="application/xml" />
-	<resource name="sitemap" type="application/xml" />
-	<resource name="favicon" type="image/png" />
+    <resource-directory name="css" type="text/css" />
+    <resource-directory name="xsl" type="application/xslt+xml" />
+    <resource-directory name="dictionary" type="application/xml" />
+    <resource name="sitemap" type="application/xml" />
+    <resource name="favicon" type="image/png" />
 
-	<fragment name="pages">
-		<fragment name="home">
-			<link-stylesheet ref="/css/default" />
-			<use-template ref="/xsl/_home" />
-		</fragment>
-	</fragment>
+    <fragment name="pages">
+        <fragment name="home">
+            <link-stylesheet ref="/css/default" />
+            <use-template ref="/xsl/_home" />
+            <link-dictionary ref="/dictionary" />
+        </fragment>
+    </fragment>
 </assets>
